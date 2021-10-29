@@ -9,32 +9,33 @@
   user-select: none;
 }
 
+.custom-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
 /* Фактическое всплывающее окно */
 .popup .popuptext {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
   visibility: hidden;
   width: 300px;
-  background-color: #555;
-  color: #fff;
+  background-color: #3eff0e;
+  color: #0e0d0d;
   text-align: center;
   border-radius: 6px;
   padding: 16px;
   position: fixed;
   z-index: 1;
-  bottom: 88%;
   left: 11%;
-  margin-left: -80px;
+  box-shadow: inset 2px 2px 5px rgb(154 147 140 / 50%), 1px 1px 5px rgb(255 255 255);
 }
 
-@media (max-width: 819px) {
+@media (max-width: 370px) {
   .popup .popuptext {
-    left: 20%;
-  }
-}
-
-@media (max-width: 420px) {
-  .popup .popuptext {
-    width: 50%;
-    left: 27%;
+    left: 1%;
   }
 }
 
