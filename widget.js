@@ -10,8 +10,8 @@ function getRandomIntInclusive(min, max) {
 
 let timerId = setTimeout(function widget() { 
   let randomNameNumber = getRandomIntInclusive(0, arrName.length-1);
-  let popup = document.getElementById("popup");
-  popup.innerHTML = `${arrName[randomNameNumber]} اشترى منتج. لا يوجد سوى العناصر المتبقية: ${counterPrice}. تنبيه سينتهي الخصم قريبًا!`;
+  let popup = document.getElementById("popup-cust");
+  popup.innerHTML = `${arrName[randomNameNumber]} купил товар. Товара осталось всего: ${counterPrice}. Внимание! Скидка скоро закончится!`;
   
   let icon = document.createElement('i');
   icon.className = 'fas fa-shopping-cart custom-icon';
