@@ -8,6 +8,12 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
+function listenNatification () {
+    let audio = new Audio();
+    audio.src = 'audio/natif.mp3'; 
+    audio.autoplay = true; 
+}
+
 let timerId = setTimeout(function widget() { 
   let randomNameNumber = getRandomIntInclusive(0, arrName.length-1);
   let popup = document.getElementById("popup-cust");
@@ -17,6 +23,8 @@ let timerId = setTimeout(function widget() {
   icon.className = 'fas fa-shopping-cart custom-icon';
   popup.appendChild(icon);
 
+  listenNatification ();
+
   popup.classList.toggle("show");
 
   if (counterPrice == 1) {
@@ -25,5 +33,5 @@ let timerId = setTimeout(function widget() {
 
   counterPrice--;
 
-  timerId = setTimeout(widget, 10000); // (*)
-}, 17000);
+  timerId = setTimeout(widget, 11000); // (*)
+}, 18000);
