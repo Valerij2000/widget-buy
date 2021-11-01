@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /* Всплывающим окном - может быть везде, где угодно */
+
 .popup {
   position: relative;
   display: inline-block;
@@ -22,7 +24,10 @@
   align-items: center;
   visibility: hidden;
   width: 300px;
-  background-color: #3eff0e;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  border-top: 5px solid #da513d;
+  border-bottom: 5px solid #ddd;
   color: #0e0d0d;
   text-align: center;
   border-radius: 6px;
@@ -30,7 +35,7 @@
   position: fixed;
   z-index: 1;
   left: 11%;
-  box-shadow: inset 2px 2px 5px rgb(154 147 140 / 50%), 1px 1px 5px rgb(255 255 255);
+  font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 370px) {
@@ -61,10 +66,21 @@
 /* Добавить анимацию (исчезает во всплывающем окне) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
-  to {opacity: 1;}
+  to {opacity: 1; }
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+  from {opacity: 0; }
+  to {
+    opacity:1 ;
+    padding: 1em;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: all 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+    transition: all 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+    transform: rotate(360deg);
+    border-top: 5px solid #da513d;
+    border-bottom: 5px solid #ddd;
+  }
 }

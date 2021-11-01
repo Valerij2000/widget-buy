@@ -10,7 +10,7 @@ function getRandomIntInclusive(min, max) {
 
 let timerId = setTimeout(function widget() { 
   let randomNameNumber = getRandomIntInclusive(0, arrName.length-1);
-  let popup = document.getElementById("popup");
+  let popup = document.getElementById("popup-cust");
   popup.innerHTML = `${arrName[randomNameNumber]} اشترى منتج. لا يوجد سوى العناصر المتبقية: ${counterPrice}. تنبيه سينتهي الخصم قريبًا!`;
   
   let icon = document.createElement('i');
