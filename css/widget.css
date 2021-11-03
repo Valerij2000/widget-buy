@@ -1,6 +1,7 @@
 /* Всплывающим окном - может быть везде, где угодно */
 .popup {
-  position: relative;
+  position: absolute;
+  top: 10px;
   display: inline-block;
   cursor: pointer;
   -webkit-user-select: none;
