@@ -8,10 +8,10 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
-function listenNatification () {
+function listenNatification (flag) {
     let audio = new Audio();
     audio.src = 'audio/natif.mp3'; 
-    audio.autoplay = true; 
+    audio.autoplay = flag; 
 }
 
 let timerId = setTimeout(function widget() { 
@@ -23,15 +23,21 @@ let timerId = setTimeout(function widget() {
   icon.className = 'fas fa-shopping-cart custom-icon';
   popup.appendChild(icon);
 
-  listenNatification ();
-
   popup.classList.toggle("show");
+
+  if (popup.classList.contains('show')) {
+    listenNatification(true);
+  } else {
+    listenNatification(false);
+  }
 
   if (counterPrice == 1) {
     counterPrice = 70;
   }
 
-  counterPrice = counterPrice-randomNameNumber;
+  let counterTimeline = getRandomIntInclusive(1, 3);
+
+  counterPrice = counterPrice-counterTimeline;
 
   timerId = setTimeout(widget, 20000); // (*)
 }, 60000);
