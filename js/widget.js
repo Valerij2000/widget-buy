@@ -31,7 +31,7 @@ let timerId = setTimeout(function widget() {
     counterPrice = 70;
   }
 
-  counterPrice--;
+  counterPrice = counterPrice-randomNameNumber;
 
-  timerId = setTimeout(widget, 11000); // (*)
-}, 18000);
+  timerId = setTimeout(widget, 20000); // (*)
+}, 60000);
